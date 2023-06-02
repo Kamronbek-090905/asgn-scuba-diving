@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+a{color: inherit !important;}
+img {width: 100%;}
+
+// color
+$white : white;
+$black : black;
+$gold : #5b97f8;
+$halfGold: #04147b;
+$light : #dadada;
+$silver : silver;
+$gray : gray;
+$lighGold : #EEEEEE;
+
+
+// mixins
+@mixin button {
+    padding: 5px 10px;
+    background: $halfGold;
+    border: 2px solid $gold;
+    color: $white;
+    font-size: 1rem;
+    transition: .3s;
+    &:hover {background: $gold;}
+}

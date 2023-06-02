@@ -1,0 +1,613 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit !important;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background: black;
+  color: white;
+  font-weight: 100;
+  height: 100vh;
+}
+header nav {
+  width: 100%;
+  background: black;
+  z-index: 10000000;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15%;
+  gap: 20px;
+}
+header nav .hide {
+  display: none;
+}
+header nav a:hover {
+  color: #5b97f8 !important;
+  text-decoration: none !important;
+}
+header nav p {
+  margin: 0;
+  padding: 0;
+}
+header nav .top {
+  display: flex;
+  justify-content: space-between;
+  line-height: 30px;
+  align-items: center;
+}
+header nav .top i {
+  margin: 0 10px;
+}
+header nav .top img {
+  width: 100px;
+}
+header nav .bottom {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+header nav .bottom ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 50px;
+}
+header .showcase {
+  background-image: url("https://checkyeti.imgix.net/images/optimized/cave-diving-sem-hero.jpg");
+  background-position: center;
+  background-size: 100%;
+  padding: 15px 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: center;
+}
+header .showcase h1 {
+  font-size: 4rem;
+  color: #5b97f8;
+  margin: 0;
+  padding: 0;
+}
+header .showcase p {
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+}
+header .showcase button {
+  padding: 5px 10px;
+  background: #04147b;
+  border: 2px solid #5b97f8;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+}
+header .showcase button:hover {
+  background: #5b97f8;
+}
+
+.guns {
+  background: #dadada;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 15%;
+  align-items: center;
+}
+.guns .categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+.guns .categories a:nth-child(1) {
+  color: #5b97f8 !important;
+  border-bottom: 2px solid #5b97f8;
+}
+.guns .categories a {
+  transition: 0.3s;
+}
+.guns .categories a:hover {
+  text-decoration: none;
+  color: #5b97f8 !important;
+}
+.guns .uk-card h1 {
+  font-size: 1.4rem;
+  color: #5b97f8;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.guns .uk-card button {
+  padding: 5px 10px;
+  background: #04147b;
+  border: 2px solid #5b97f8;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+  background: #EEEEEE;
+  color: #5b97f8;
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+.guns .uk-card button:hover {
+  background: #5b97f8;
+}
+.guns .uk-card button:hover {
+  background: #04147b;
+}
+.guns .uk-card:hover button {
+  display: block;
+}
+.guns button {
+  padding: 5px 10px;
+  background: #04147b;
+  border: 2px solid #5b97f8;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+  background: #EEEEEE;
+  color: #5b97f8;
+  padding: 10px 40px;
+  font-size: 1.1rem;
+  width: 100%;
+}
+.guns button:hover {
+  background: #5b97f8;
+}
+.guns button:hover {
+  background: #04147b;
+  color: white;
+}
+
+.katalog {
+  background: #dadada;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 15%;
+}
+.katalog h1 {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
+.katalog .cards {
+  display: grid;
+  grid-template-columns: repeat(10, 8.5%);
+  gap: 20px;
+  row-gap: 40px;
+  grid-template-rows: repeat(3, 300px);
+}
+.katalog .cards .card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: black;
+  background: white;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+.katalog .cards .card img {
+  height: 100%;
+  height: auto;
+}
+.katalog .cards .card p {
+  padding: 0 20px;
+  height: 30px;
+  font-size: 1.2rem;
+}
+.katalog .cards .card:nth-child(1) {
+  grid-column: 1/5;
+  grid-row: 1/2;
+}
+.katalog .cards .card:nth-child(2) {
+  grid-column: 5/11;
+  grid-row: 1/2;
+}
+.katalog .cards .card:nth-child(3) {
+  grid-column: 1/4;
+  grid-row: 2/3;
+}
+.katalog .cards .card:nth-child(4) {
+  grid-column: 4/8;
+  grid-row: 2/3;
+}
+.katalog .cards .card:nth-child(5) {
+  grid-column: 8/11;
+  grid-row: 2/3;
+}
+.katalog .cards .card:nth-child(6) {
+  grid-column: 1/5;
+  grid-row: 3/4;
+}
+.katalog .cards .card:nth-child(7) {
+  grid-column: 5/8;
+  grid-row: 3/4;
+}
+.katalog .cards .card:nth-child(8) {
+  grid-column: 8/11;
+  grid-row: 3/4;
+}
+
+.bigParts {
+  padding: 100px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: #dadada;
+}
+.bigParts h1 {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
+.bigParts .parts {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.bigParts .parts .part {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px;
+  text-align: left;
+  align-items: center;
+  justify-content: space-between;
+  background-size: 100%;
+}
+.bigParts .parts .part h1 {
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(80px);
+}
+.bigParts .parts .part p {
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(80px);
+}
+.bigParts .parts .part:nth-child(1) {
+  background: url("https://cdn-bmmka.nitrocdn.com/NvnUfAZCWmxCuUhhRLQuLKCGGWUzyrDM/assets/images/optimized/rev-260c940/wp-content/uploads/2015/08/a6bfc86a-3a0e-11e5-_951949c.jpg");
+}
+.bigParts .parts .part:nth-child(2) {
+  background: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701754683.jpg");
+}
+.bigParts .parts .part:nth-child(3) {
+  background: url("https://getwallpapers.com/wallpaper/full/8/e/b/1136206-scuba-diving-wallpaper-1920x1080-for-retina.jpg");
+}
+
+.about {
+  background: #dadada;
+  padding: 50px 0;
+  display: grid;
+  gap: 45px;
+  align-items: center;
+  grid-template-columns: 50% 35%;
+}
+.about .text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+.about .text h1, .about .text p {
+  margin: 0;
+  padding: 0;
+}
+.about .text h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
+.about .text p {
+  font-size: 0.9rem;
+}
+.about .text button {
+  padding: 5px 10px;
+  background: #04147b;
+  border: 2px solid #5b97f8;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+  padding: 15px 40px;
+  background: white;
+  color: #5b97f8 !important;
+}
+.about .text button:hover {
+  background: #5b97f8;
+}
+.about .text button:hover {
+  color: white !important;
+}
+
+.answares {
+  background: #dadada;
+  padding: 50px 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.answares h1 {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-family: cursive;
+  font-weight: 100;
+  font-style: italic;
+  color: #5b97f8;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  color: black;
+}
+.answares ul {
+  gap: 20px;
+}
+.answares .uk-position-small {
+  padding: 5px;
+  color: black !important;
+  width: 35px;
+  height: 35px;
+}
+.answares .uk-card {
+  background: #5b97f8;
+  color: white;
+}
+
+.info {
+  background: #dadada;
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 30px;
+  justify-content: right;
+}
+.info form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 1.1rem;
+}
+.info form h1 {
+  font-family: cursive;
+  font-style: italic;
+  color: gray;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  color: black;
+}
+.info form input {
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+.info form .inp {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.info form .inp:nth-child(5) {
+  flex-direction: row;
+}
+.info form .inp:nth-child(5) label {
+  font-size: 0.7rem;
+}
+.info form .inp:nth-child(5) input {
+  width: auto;
+}
+.info form button {
+  padding: 5px 10px;
+  background: #04147b;
+  border: 2px solid #5b97f8;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+  padding: 15px 30px;
+}
+.info form button:hover {
+  background: #5b97f8;
+}
+
+footer {
+  display: flex;
+  padding: 100px 15%;
+  background: black;
+  color: white;
+  gap: 70px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+footer ul, footer p {
+  margin: 0;
+  padding: 0;
+}
+footer .left {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+footer .left img {
+  width: 200px;
+}
+footer .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .right p {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer .right p .links {
+  display: flex;
+  gap: 10px;
+}
+footer .right p .links i {
+  color: #5b97f8;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #5b97f8;
+}
+footer .right span {
+  color: silver !important;
+  font-size: 0.9rem !important;
+}
+
+@media (max-width: 1050px) {
+  header nav .top, header nav .bottom {
+    display: none;
+  }
+  header nav .hide {
+    display: flex !important;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  header nav .hide input {
+    padding: 5px 20px;
+    background: none;
+    border: 2px solid #5b97f8;
+    color: #5b97f8;
+    outline: none;
+    font-size: 1rem;
+  }
+  header nav .hide #check {
+    display: none;
+  }
+  header nav .hide ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: gray;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+  }
+  header nav .hide label {
+    font-size: 1.2rem;
+    z-index: 1000;
+  }
+  header nav .hide #check:checked ~ ul {
+    left: 0;
+  }
+  header nav .hide #check:checked ~ label {
+    position: fixed;
+  }
+}
+@media (max-width: 768px) {
+  header nav .hide > p {
+    display: none;
+  }
+  header .showcase h1 {
+    font-size: 2.2rem;
+  }
+  .guns .categories {
+    gap: 10px;
+  }
+  .guns .categories a {
+    font-size: 1.3rem;
+  }
+  .katalog .cards {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(8, 300px);
+  }
+  .katalog .cards .card:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .katalog .cards .card:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .katalog .cards .card:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .katalog .cards .card:nth-child(4) {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .katalog .cards .card:nth-child(5) {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  .katalog .cards .card:nth-child(6) {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+  .katalog .cards .card:nth-child(7) {
+    grid-column: 1/2;
+    grid-row: 7/8;
+  }
+  .katalog .cards .card:nth-child(8) {
+    grid-column: 1/2;
+    grid-row: 8/9;
+  }
+  .bigParts .parts {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bigParts .parts .part {
+    width: 85%;
+  }
+  .about {
+    grid-template-columns: 100%;
+    padding: 50px;
+  }
+  .info {
+    grid-template-columns: 100%;
+    padding: 50px;
+  }
+  footer {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

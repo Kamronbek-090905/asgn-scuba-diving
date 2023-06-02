@@ -1,0 +1,502 @@
+@import "./base.scss";
+
+header {
+    display: flex;
+    flex-direction: column;
+    background: $black;
+    color: $white;
+    font-weight: 100;
+    height: 100vh;
+    nav {
+        width: 100%;
+        background: $black;
+        z-index: 10000000;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 15%;
+        .hide {display: none;}
+        a:hover{color: $gold !important; text-decoration: none !important;}
+        p{margin: 0; padding: 0;}
+        gap: 20px;
+        .top {
+            display: flex;
+            justify-content: space-between;
+            line-height: 30px;
+            align-items: center;
+            i{margin: 0 10px;}
+            img {width: 100px;}
+        }
+        .bottom {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            ul {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                gap: 50px;
+            }
+        }
+    }
+
+    .showcase  {
+        background-image: url("https://checkyeti.imgix.net/images/optimized/cave-diving-sem-hero.jpg");
+        background-position: center;
+        background-size: 100%;
+        padding: 15px 15%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+        justify-content: center;
+        h1 {
+            font-size: 4rem;
+            color: $gold;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-size: 1.3rem;
+            margin: 0;
+            padding: 0;
+        }
+        button {
+            @include button;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.guns {
+    background: $light;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px 15%;
+    align-items: center;
+    .categories {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-between;
+        font-size: 1.4rem;
+        a:nth-child(1) {
+            color: $gold !important;
+            border-bottom: 2px solid $gold;
+        }
+        a{transition: .3s;}
+        a:hover{text-decoration: none; color: $gold !important;}
+    }
+
+    .uk-card {
+        h1 {
+            font-size: 1.4rem;
+            color: $gold;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        button {
+            @include button;
+            background: $lighGold;
+            color: $gold;
+            &:hover{background: $halfGold;}
+            font-size: 0.8rem;
+            padding: 10px 20px;
+            transition: .3s;
+        }
+        &:hover button {display: block;}
+    }
+    button {
+        @include button;
+        background: $lighGold;
+        color: $gold;
+        padding: 10px 40px;
+        font-size: 1.1rem;
+        width: 100%;
+        &:hover{background: $halfGold; color: $white;}
+    }
+}
+
+.katalog {
+    background: $light;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 15%;
+    h1 {
+        text-align: center;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 700;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(10,8.5%);
+        gap: 20px;
+        row-gap: 40px;
+        grid-template-rows: repeat(3,300px);
+        .card {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 1.2rem;
+            color: $black;
+            background: $white;
+            text-transform: capitalize;
+            img{
+                height: calc(100% - 50px) !important; 
+                width: 100% ;
+            }
+            p {
+                padding: 0 20px; 
+                height: 30px;
+                font-size: 1.2rem;
+            }
+        }
+        .card:nth-child(1) {
+            grid-column: 1/5;
+            grid-row: 1/2;
+        }
+        .card:nth-child(2) {
+            grid-column: 5/11;
+            grid-row: 1/2;
+        }
+        .card:nth-child(3) {
+            grid-column: 1/4;
+            grid-row: 2/3;
+        }
+        .card:nth-child(4) {
+            grid-column: 4/8;
+            grid-row: 2/3;
+        }
+        .card:nth-child(5) {
+            grid-column: 8/11;
+            grid-row: 2/3;
+        }
+        .card:nth-child(6) {
+            grid-column: 1/5;
+            grid-row: 3/4;
+        }
+        .card:nth-child(7) {
+            grid-column: 5/8;
+            grid-row: 3/4;
+        }
+        .card:nth-child(8) {
+            grid-column: 8/11;
+            grid-row: 3/4;
+        }
+    }
+}
+
+.bigParts {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: $light;
+    h1 {
+        text-align: center;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 700;
+    }
+    .parts {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        .part {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            padding: 50px 20px;
+            text-align: left;
+            align-items: center;
+            justify-content: space-between;
+            background-size: auto 100% !important;
+            background-position: center center;
+            h1 {
+                font-size: 2rem;
+                color: $white;
+                background: rgba(0, 0, 0, 0.5);
+                padding: 10px 20px;
+                border-radius: 10px;
+                backdrop-filter: blur(80px);
+            }
+            p {
+                color: $white;
+                background: rgba(0, 0, 0, 0.3);
+                padding: 10px;
+                border-radius: 10px;
+                backdrop-filter: blur(80px);
+            }
+        }
+        .part:nth-child(1) {background: url("https://cdn-bmmka.nitrocdn.com/NvnUfAZCWmxCuUhhRLQuLKCGGWUzyrDM/assets/images/optimized/rev-260c940/wp-content/uploads/2015/08/a6bfc86a-3a0e-11e5-_951949c.jpg");}
+        .part:nth-child(2) {background: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701754683.jpg")}
+        .part:nth-child(3) {background: url("https://getwallpapers.com/wallpaper/full/8/e/b/1136206-scuba-diving-wallpaper-1920x1080-for-retina.jpg")}
+    }
+}
+
+
+.about {
+    background: $light;
+    padding: 50px 0;
+    display: grid;
+    gap: 45px;
+    align-items: center;
+    grid-template-columns: 50% 35%;
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        h1,p{margin: 0;padding: 0;}
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 700;
+        }
+        p{font-size: .9rem;}
+        button {
+            @include button;
+            padding: 15px 40px;
+            background: $white;
+            color: $gold !important;
+            &:hover{color: $white !important;}
+        }
+    }
+}
+
+.answares {
+    background: $light;
+    padding: 50px 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        font-family: cursive;
+        font-weight: 100;
+        font-style: italic;
+        color: $gold;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 700;
+        color: $black;
+    }
+    ul {gap: 20px;}
+    .uk-position-small {
+        padding: 5px;
+        color: $black !important;
+        width: 35px;
+        height: 35px;
+    }
+    .uk-card {background: $gold; color: $white;}   
+}
+
+.info {
+    background: $light;
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 30px;
+    justify-content: right;
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: flex-start;
+        font-size: 1.1rem;
+        h1{
+            font-family: cursive;
+            font-style: italic;
+            color: $gray;
+            font-size: 2.5rem;
+            text-align: center;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 700;
+            color: $black;
+        }
+        input {
+            padding: 10px 20px;
+            width: 100%;
+            font-size: 1rem;
+            border: none;
+            outline: none;
+        }
+        .inp{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .inp:nth-child(5){
+            flex-direction: row; 
+            label{font-size: .7rem;}
+            input {width: auto;}
+        }
+        button {
+            @include button;
+            padding: 15px 30px;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    padding: 100px 15%;
+    background: $black;
+    color: $white;
+    gap: 70px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    ul, p{margin: 0; padding: 0;}
+    .left {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        img {width: 200px ;}
+    }
+    .right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        p {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .links {
+                display: flex;
+                gap: 10px;
+                i {
+                    color: $gold;
+                    font-size: 1rem;
+                    padding: 10px;
+                    border: 1px solid $gold;
+                }
+            }
+        }
+        span {color: silver !important; font-size: 0.9rem !important;}
+    }
+}
+
+
+
+
+@media (max-width:1050px) {
+    header {
+        nav {
+            .top, .bottom {display: none;}
+            .hide {
+                display: flex !important;
+                justify-content: space-between;
+                gap: 20px;
+                input {
+                    padding: 5px 20px;
+                    background: none;
+                    border: 2px solid $gold;
+                    color: $gold;
+                    outline: none;
+                    font-size: 1rem;
+                }
+                #check{display: none;}
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    gap: 30px;
+                    flex-direction: column;
+                    position: fixed;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100vh;
+                    background: $gray;
+                    z-index: 100;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.2rem;
+                    letter-spacing: 1px;
+                    transition: .3s;
+                }
+                label {
+                    font-size: 1.2rem;
+                    z-index: 1000;
+                }
+                #check:checked ~ ul {left: 0;}
+                #check:checked ~ label {position: fixed;}
+            }
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    header {
+        nav .hide > p{display: none;}
+        .showcase h1{font-size: 2.2rem;}
+    }    
+    .guns .categories {
+        gap: 10px;
+        a{font-size: 1.3rem;}
+    }
+
+    .katalog .cards {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(8,300px);
+
+        .card:nth-child(1) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .card:nth-child(2) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .card:nth-child(3) {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        .card:nth-child(4) {
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+        .card:nth-child(5) {
+            grid-column: 1/2;
+            grid-row: 5/6;
+        }
+        .card:nth-child(6) {
+            grid-column: 1/2;
+            grid-row: 6/7;
+        }
+        .card:nth-child(7) {
+            grid-column: 1/2;
+            grid-row: 7/8;
+        }
+        .card:nth-child(8) {
+            grid-column: 1/2;
+            grid-row: 8/9;
+        }
+    }
+    .bigParts{
+        .parts {
+            flex-direction: column;
+            align-items: center;
+            .part {width: 85%;}
+        }
+    }
+    .about{grid-template-columns: 100%; padding: 50px;}
+    .info{grid-template-columns: 100%; padding: 50px;}
+    
+    footer {
+        flex-direction: column;
+    }
+}
